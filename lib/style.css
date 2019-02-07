@@ -1,0 +1,97 @@
+main {
+  display: grid;
+}
+
+header {
+  margin: 5px 0px 20px;
+}
+
+header h1 {
+  text-align: center;
+}
+
+[data-component="articles-page"] {
+  justify-self: center;
+}
+
+.button {
+  border: 1px solid #777;
+  border-radius: 15px;
+  width:120px;
+  margin: 0 auto;
+  padding: 4px;
+  text-align: center;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #eee;
+  font-weight: bold;
+}
+
+.error {
+  color: red;
+}
+
+.articles {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.article {
+  margin-bottom: 10px;
+  width: 800px;
+}
+
+.article-header, .article-text {
+  padding: 5px 15px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.article-text {
+  display: none;
+}
+
+.expanded {
+  display: block;
+}
+
+.highlighted {
+  background-color: rgb(126, 234, 248);
+}
+
+[data-element="header-arrow"] {
+  float: right;
+}
+
+[data-component="paginator"] {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "prev input info next";
+}
+ 
+.page-prev {
+  grid-area: prev;
+  place-self: center start;
+}
+
+.page-input {
+  grid-area: input;
+  place-self: center end;
+  width: 40px;
+}
+
+.paginator-info {
+  grid-area: info;
+  place-self: center start;
+  margin-left: 10px;
+}
+
+.page-next {
+  grid-area: next;
+  place-self: center center;
+}
