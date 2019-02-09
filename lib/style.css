@@ -22,12 +22,13 @@ header h1 {
   padding: 4px;
   text-align: center;
   background-color: #ddd;
-  cursor: pointer;
+  user-select: none;
 }
 
-.button:hover {
+.toggleable:hover, .refresh:hover {
   background-color: #eee;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .error {
@@ -44,18 +45,22 @@ header h1 {
   width: 800px;
 }
 
-.article-header, .article-text {
+.article-header {
   padding: 5px 15px;
   border: 1px solid #000;
   cursor: pointer;
 }
-
 .article-text {
-  display: none;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  max-height: 0;            
+  overflow-y: hidden;
+  transition: all 0.5s ease-in-out;             
 }
 
 .expanded {
-  display: block;
+  padding: 5px 15px;
+  max-height: 120px ;       
 }
 
 .highlighted {
@@ -64,6 +69,7 @@ header h1 {
 
 [data-element="header-arrow"] {
   float: right;
+  width: 1%;
 }
 
 [data-component="paginator"] {
@@ -82,7 +88,7 @@ header h1 {
 .page-input {
   grid-area: input;
   place-self: center end;
-  width: 40px;
+  width: 60px;
 }
 
 .paginator-info {
