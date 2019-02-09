@@ -53,14 +53,14 @@ header h1 {
 .article-text {
   border: 1px solid #000;
   box-sizing: border-box;
-  max-height: 0;            
-  overflow-y: hidden;
-  transition: all 0.5s ease-in-out;             
+  height: 0px;
+  transition: height 1s, padding  1s;
+  overflow: hidden;
 }
 
 .expanded {
   padding: 5px 15px;
-  max-height: 120px ;       
+  height: 120px;  
 }
 
 .highlighted {
@@ -73,6 +73,8 @@ header h1 {
 }
 
 [data-component="paginator"] {
+  width: 800px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
